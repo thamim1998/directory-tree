@@ -1,5 +1,5 @@
 type Folder = {
-    id: string;
+    id: number;
     name: string;
     isFolder: boolean;
     items: Folder[];
