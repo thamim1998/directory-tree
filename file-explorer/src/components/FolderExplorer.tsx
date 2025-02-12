@@ -24,16 +24,16 @@ const FolderExplorer: React.FC<folderProps> = ({ explorer, handleInsertNode, han
     });
   };
 
-  const addFolder = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const addFolder = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.currentTarget.value && e.key == "Enter") {
-      handleInsertNode(explorer.id, e.currentTarget.value, showInput.isFolder);
+      await handleInsertNode(explorer.id, e.currentTarget.value, showInput.isFolder);
       setShowInput({ ...showInput, visible: false });
     }
   };
 
+
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    console.log("isFolder", explorer.id);
     handleDeleteNode(explorer.id);
   };
 

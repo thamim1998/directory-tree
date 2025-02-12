@@ -1,7 +1,7 @@
 import Folder from "../data/Folder";
 
 const useTreeTraversal = () => {
-  function insertNode(tree: Folder, folderId: number, name: string, isFolder: boolean): Folder {
+  function insertNode(tree: Folder , folderId: number, name: string, isFolder: boolean): Folder {
     if (tree.id == folderId && tree.isFolder) {
       tree.items.unshift({
         name: name,
